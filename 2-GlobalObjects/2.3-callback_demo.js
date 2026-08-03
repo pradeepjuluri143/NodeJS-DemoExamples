@@ -13,8 +13,8 @@ console.log("=== Node.js Timer Globals Demo ===\n");
 // Executes the callback function *once* after the given delay (in milliseconds)
 // -------------------------------------------------------------
 setTimeout(() => {
-  console.log("⏰ setTimeout: This runs after 2 seconds (2000 ms)");
-}, 2000);
+  console.log("⏰ setTimeout: This runs after 5 seconds (5000 ms)");
+}, 5000);
 
 // -------------------------------------------------------------
 // 🔹 setInterval(callback, delay)
