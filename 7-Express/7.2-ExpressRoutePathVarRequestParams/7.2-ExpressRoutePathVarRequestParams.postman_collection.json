@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "b2c3d4e5-7200-4000-8000-000000000072",
+		"name": "7.2-ExpressRoutePathVarRequestParams",
+		"description": "Postman Collection for 7.2-ExpressRoutePathVarRequestParams demo covering GET, POST, PUT, DELETE, Query Params, Path Variables, and JSON Body.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Welcome Message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Basic GET root route returning welcome message."
+			},
+			"response": []
+		},
+		{
+			"name": "GET Greet (Query Params)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/greet?name=Mounika&lang=telugu",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"greet"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Mounika",
+							"description": "Name of the person to greet"
+						},
+						{
+							"key": "lang",
+							"value": "telugu",
+							"description": "Language for greeting (telugu, hindi, english)"
+						}
+					]
+				},
+				"description": "Demonstrates Query Parameters (req.query)."
+			},
+			"response": []
+		},
+		{
+			"name": "GET User by ID (Path Variable)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "10",
+							"description": "User ID path parameter"
+						}
+					]
+				},
+				"description": "Demonstrates Path Variables / Route Params (req.params.id)."
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create User (JSON Body)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Mahi\",\n  \"email\": \"mahi@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Demonstrates creating user with JSON body parsing (req.body)."
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update User by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5",
+							"description": "User ID path parameter"
+						}
+					]
+				},
+				"description": "Demonstrates updating user with PUT method, path param, and JSON body."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5",
+							"description": "User ID path parameter"
+						}
+					]
+				},
+				"description": "Demonstrates removing data with DELETE method and path param."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
