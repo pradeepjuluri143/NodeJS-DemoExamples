@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-7100-4000-8000-000000000071",
+		"name": "7.1-HelloWorldExpress",
+		"description": "Postman Collection for 7.1-HelloWorldExpress demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Returns 'Hello World!' plain text response."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
