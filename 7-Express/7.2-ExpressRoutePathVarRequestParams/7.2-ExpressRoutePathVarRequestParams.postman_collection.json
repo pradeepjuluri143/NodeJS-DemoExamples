@@ -16,9 +16,7 @@
 					"host": [
 						"{{baseUrl}}"
 					],
-					"path": [
-						""
-					]
+					"path": []
 				},
 				"description": "Basic GET root route returning welcome message."
 			},
