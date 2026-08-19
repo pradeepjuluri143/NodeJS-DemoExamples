@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     console.log("M2 BEFORE");
 
-    next();
+    //next();
 
     console.log("M2 AFTER");
 });
